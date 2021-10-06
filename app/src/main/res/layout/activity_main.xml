@@ -1,18 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.1" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#B3064153"
+    android:padding="8dp">
 
     <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:background="#B3064153"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="72dp"
+        android:layout_toEndOf="@+id/text_view"
+        android:scaleType="centerCrop"
+        android:src="@drawable/android" />
+
+    <ImageButton
+        android:id="@+id/button"
+        style="@android:style/Widget.Material.Light.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentLeft="true"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="680dp"
+        android:layout_toEndOf="@+id/image_view"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00FFFFFF"
+        android:maxWidth="86dp"
+        android:maxHeight="86dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/apple" />
+
+</RelativeLayout>
